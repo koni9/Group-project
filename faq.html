@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background: #fff;
+      color: #333;
+      padding: 20px;
+      font-family: 'Work Sans', sans-serif;
+    }
+
+    .faq-image img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .faq-section h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-align: center;
+      font-family: 'Work Sans', sans-serif;
+    }
+
+    .faq-item {
+      background-color: #f3efef;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq-question {
+      padding: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .faq-answer {
+      padding: 0 15px 15px;
+      display: none;
+      color: #444;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-question {
+      color: #052c65;
+    }
+
+    .faq-item.active .arrow {
+      transform: rotate(180deg);
+       
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="faq-section text-center">
+      <h1>FAQs</h1>
+    </div>
+
+    <div class="row align-items-start">
+      <div class="col-md-6 faq-image">
+        <img src="illustration-6.png" alt="Illustration of people talking">
+      </div>
+
+      <div class="col-md-6 faq-section">
+        <div class="faq-item">
+          <div class="faq-question">
+            Can I use credit cards or USD for payment?
+            <i class="fa-solid fa-angle-down arrow"></i>
+          </div>
+          <div class="faq-answer">
+            Yes, we accept credit cards and USD for payments.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What times are you available for calls?
+            <i class="fa-solid fa-angle-down arrow"></i>
+          </div>
+          <div class="faq-answer">
+            We are available for calls between 9 AM and 6 PM (local time).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            How do I hire you for few months?
+            <i class="fa-solid fa-angle-down arrow"></i>
+          </div>
+          <div class="faq-answer">
+            You can reach out via our contact form or email us to discuss long-term hiring.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Will I get the source files of my order?
+            <i class="fa-solid fa-angle-down arrow"></i>
+          </div>
+          <div class="faq-answer">
+            Yes, all deliverables include source files unless otherwise specified.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Will I get the source files of my order?
+            <i class="fa-solid fa-angle-down arrow"></i>
+          </div>
+          <div class="faq-answer">
+            Yes, all deliverables include source files unless otherwise specified.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        const currentlyActive = document.querySelector('.faq-item.active');
+
+        if (currentlyActive && currentlyActive !== item) {
+          currentlyActive.classList.remove('active');
+        }
+
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
