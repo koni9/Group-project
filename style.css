@@ -158,12 +158,6 @@
   font-size: 15px;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  background-color: #fff;
-}
-
 .filter-buttons {
   display: flex;
   gap: 10px;
@@ -192,7 +186,6 @@ body {
   justify-content: center;
   padding: 20px;
 }
-
 
 .card {
   width: 280px;
@@ -317,7 +310,6 @@ body {
 
 .faq-item.active .arrow {
   transform: rotate(180deg);
-
 }
 
 .mt-5rem {
