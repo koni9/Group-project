@@ -7,6 +7,7 @@ const closeBtn = document.querySelector(".close");
 // Filter logic
 buttons.forEach(button => {
     button.addEventListener("click", () => {
+
         document.querySelector(".filter-buttons button.active").classList.remove("active");
         button.classList.add("active");
 
@@ -37,14 +38,19 @@ cards.forEach(card => {
     });
 });
 
-// Close modal
+// Close modal when clicking the close button
 closeBtn.onclick = () => {
     modal.style.display = "none";
 };
 
-// Close when clicking outside image
+// Close modal when clicking outside the image
 window.onclick = (e) => {
     if (e.target === modal) {
         modal.style.display = "none";
     }
+};
+
+// Close modal when clicking the image itself
+modalImg.onclick = () => {
+    modal.style.display = "none";
 };
